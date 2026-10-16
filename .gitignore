@@ -1,0 +1,4 @@
+.what-skill/
+node_modules/
+.env
+.env.*

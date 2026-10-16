@@ -1,0 +1,17 @@
+{
+  "name": "what-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Full-corpus Agent Skill selector using Pi",
+  "bin": {
+    "what-skill": "./bin/what-skill.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node bin/what-skill.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
