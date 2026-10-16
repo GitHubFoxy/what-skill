@@ -88,10 +88,7 @@ async function runPi(options, files, query) {
   if (options.model) args.push('--model', options.model);
   if (options.thinking) args.push('--thinking', options.thinking);
   args.push(...files.map(f => '@' + f));
-  args.push('Task to analyze:\n' + query +
-    '\n\nAnalyze ALL attached corpus files in full, using real reasoning rather than keywords.' +
-    ' Recommend any applicable skills and complementary combinations.' +
-    ' Return ONLY the JSON required by the system prompt. Do not execute the task.');
+  args.push('User task to analyze for skill recommendations:\n' + query);
   return await new Promise((resolve, reject) => {
     const child = spawn(options.pi || process.env.WHAT_SKILL_PI || 'pi', args,
       { cwd: root, stdio: ['ignore', 'pipe', 'pipe'] });
